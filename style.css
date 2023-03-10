@@ -3,12 +3,12 @@
   src: url(./assets/fonts/RammettoOne-Regular.ttf);
 }
 @font-face {
-  font-family: 'Candal';
-  src: url(./assets/fonts/Candal-Regular.ttf);
+  font-family: 'RussoOne';
+  src: url(./assets/fonts/RussoOne-Regular.ttf);
 }
 
 body {
-  font-family: 'Candal';
+  font-family: 'RussoOne', sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -33,7 +33,7 @@ body {
 .bayan-wrap {
   margin: 0 auto;
   margin-top: 40px;
-  max-width: 500px;
+  max-width: 600px;
 }
 
 .bayan {
@@ -65,7 +65,8 @@ body {
 
 .bayan:focus {
   min-height: 320px;
-  color: blue;
+  color: red;
+  border-color: red;
 }
 
 .bayan:focus::after {
@@ -84,6 +85,22 @@ body {
   transition: all 0.3s;
 }
 
+.img_1 {
+  background: url(./assets/img/1.png) center/contain no-repeat;
+}
+.img_2 {
+  background: url(./assets/img/2.png) center/contain no-repeat;
+}
+.img_3 {
+  background: url(./assets/img/3.jpg) center/contain no-repeat;
+}
+.img_4 {
+  background: url(./assets/img/4.jpg) center/contain no-repeat;
+}
+.img_5 {
+  background: url(./assets/img/5.png) center/contain no-repeat;
+}
+
 .bayan:focus .bayan-img {
   display: block;
 }
@@ -94,16 +111,13 @@ body {
 
 @media (min-width: 821px) {
   .bayan:hover {
-    color: blue;
+    color: red;
     min-height: 320px;
+    border-color: red;
   }
 
   .bayan:hover::after {
     transform: rotate(-45deg);
-  }
-
-  .bayan:hover .bayan-img {
-    /* display: block; */
   }
 }
 
