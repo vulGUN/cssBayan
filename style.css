@@ -11,6 +11,7 @@ body {
   font-family: 'RussoOne', sans-serif;
   margin: 0;
   padding: 0;
+  background-color: rgb(140, 63, 226);
 }
 
 * {
@@ -18,70 +19,65 @@ body {
 }
 
 .container {
-  padding: 40px 20px;
-  /* display: flex;
-  flex-direction: column; */
+  margin: 0 auto;
+  padding: 2em;
+  max-width: 50em;
 }
 
 .title {
   font-family: 'RammettoOne';
-  font-size: 40px;
-  text-align: center;
-  text-shadow: 2px 1px 1px red, 0 0 1em rgb(255, 255, 0);
+  font-size: 3.5em;
+  color: #fff;
+  text-shadow: 0.1em 0.05em 0 rgb(35, 35, 35);
 }
 
 .bayan-wrap {
-  margin: 0 auto;
-  margin-top: 40px;
-  max-width: 600px;
+  margin-top: 2em;
+}
+
+.bayan-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .bayan {
   position: relative;
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  min-height: 0;
-  column-gap: 50px;
-  font-size: 30px;
-  padding: 20px;
-  margin-top: 15px;
-  border: 1px solid #ccc;
-  border-radius: 20px;
-  background-color: transparent;
-  transition: all 0.3s;
+  max-height: 3em;
+  font-size: 2em;
+  padding: 0.9em;
+  margin-top: 1em;
+  border: 0.05em solid #000;
+  border-radius: 1em;
+  background-color: #ffffff;
+  transition: all 0.4s;
   cursor: pointer;
   overflow: hidden;
 }
 
-.bayan::after {
-  content: '';
-  background: url(./assets/img/plus-solid.svg) center no-repeat;
-  width: 22px;
-  height: 22px;
+.bayan-icon {
+  background: url(assets/img/plus-solid.svg) center/contain no-repeat;
+  width: 1em;
+  height: 1em;
+  transition: all 0.2s;
   opacity: 0;
-  transition: all 0.1s;
 }
 
 .bayan:focus {
-  min-height: 320px;
-  color: red;
-  border-color: red;
+  color: rgb(140, 63, 226);
+  max-height: 50em;
 }
 
-.bayan:focus::after {
+.bayan:focus .bayan-icon {
   transform: rotate(-45deg);
 }
 
 .bayan-img {
-  position: absolute;
-  width: 300px;
-  height: 200px;
-  top: 90px;
-  left: 50%;
-  transform: translateX(-50%);
+  margin: 0 auto;
+  margin-top: 1em;
+  width: 10em;
+  height: 10em;
   background-color: #ccc;
-  border-radius: 20px;
   transition: all 0.3s;
 }
 
@@ -100,37 +96,59 @@ body {
 .img_5 {
   background: url(./assets/img/5.png) center/contain no-repeat;
 }
-
-.bayan:focus .bayan-img {
-  display: block;
+.img_6 {
+  background: url(./assets/img/6.jpg) center/contain no-repeat;
+}
+.img_7 {
+  background: url(./assets/img/7.png) center/contain no-repeat;
+}
+.img_8 {
+  background: url(./assets/img/8.jpg) center/contain no-repeat;
 }
 
-.bayan-wrap:hover .bayan::after {
-  opacity: 1;
+@media (min-width: 1920px) {
+  .container {
+    max-width: 70em;
+  }
+
+  .title {
+    font-size: 4.5em;
+  }
+
+  .bayan {
+    font-size: 3em;
+  }
 }
 
 @media (min-width: 821px) {
   .bayan:hover {
-    color: red;
-    min-height: 320px;
-    border-color: red;
+    color: rgb(140, 63, 226);
+    max-height: 50em;
   }
 
-  .bayan:hover::after {
+  .bayan:hover .bayan-icon {
     transform: rotate(-45deg);
+  }
+
+  .bayan-wrap:hover .bayan-icon {
+    opacity: 1;
   }
 }
 
-@media (max-width: 820px) {
-  .bayan::after {
+@media (max-width: 819px) {
+  .container {
+    max-width: 40em;
+  }
+
+  .bayan-icon {
     opacity: 1;
   }
 
   .title {
-    font-size: 34px;
+    font-size: 2em;
   }
 
   .bayan {
-    font-size: 22px;
+    font-size: 1.1em;
   }
 }
