@@ -1,0 +1,163 @@
+@font-face {
+  font-family: 'RammettoOne';
+  src: url(./assets/fonts/RammettoOne-Regular.ttf);
+}
+@font-face {
+  font-family: 'RussoOne';
+  src: url(./assets/fonts/RussoOne-Regular.ttf);
+}
+
+body {
+  font-family: 'RussoOne', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(140, 63, 226);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 2em;
+  max-width: 50em;
+}
+
+.title {
+  font-family: 'RammettoOne';
+  font-size: 3.5em;
+  color: #fff;
+  text-shadow: 0.1em 0.05em 0 rgb(35, 35, 35);
+}
+
+.bayan-wrap {
+  margin-top: 2em;
+}
+
+.bayan-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bayan {
+  max-height: 3em;
+  font-size: 2em;
+  padding: 0.9em;
+  margin-top: 1em;
+  border: 0.1em solid rgb(35, 35, 35);
+  border-radius: 1em;
+  background-color: #ffffff;
+  transition: all 0.4s;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.bayan-icon {
+  background: url(assets/img/plus-solid.svg) center/contain no-repeat;
+  width: 1em;
+  height: 1em;
+  transition: all 0.2s;
+  opacity: 0;
+}
+
+.bayan:focus {
+  color: rgb(140, 63, 226);
+  max-height: 50em;
+}
+
+.bayan:focus .bayan-icon {
+  transform: rotate(-45deg);
+}
+
+.bayan-img {
+  margin: 0 auto;
+  margin-top: 1em;
+  width: 10em;
+  height: 10em;
+  background-color: #ccc;
+  transition: all 0.3s;
+}
+
+.img_1 {
+  background: url(./assets/img/1.png) center/contain no-repeat;
+}
+.img_2 {
+  background: url(./assets/img/2.png) center/contain no-repeat;
+}
+.img_3 {
+  background: url(./assets/img/3.jpg) center/contain no-repeat;
+}
+.img_4 {
+  background: url(./assets/img/4.jpg) center/contain no-repeat;
+}
+.img_5 {
+  background: url(./assets/img/5.png) center/contain no-repeat;
+}
+.img_6 {
+  background: url(./assets/img/6.jpg) center/contain no-repeat;
+}
+.img_7 {
+  background: url(./assets/img/7.png) center/contain no-repeat;
+}
+.img_8 {
+  background: url(./assets/img/8.jpg) center/contain no-repeat;
+}
+
+:active,
+:hover,
+:focus {
+  outline: 0;
+  outline-offset: 0;
+}
+
+@media (min-width: 1920px) {
+  .container {
+    max-width: 70em;
+  }
+
+  .title {
+    font-size: 4.5em;
+  }
+
+  .bayan {
+    font-size: 3em;
+  }
+}
+
+@media (min-width: 821px) {
+  .bayan:hover {
+    max-height: 50em;
+  }
+
+  .bayan:hover .bayan-icon {
+    transform: rotate(-45deg);
+  }
+
+  .bayan-wrap:hover {
+    color: rgb(140, 63, 226);
+    opacity: 1;
+  }
+  .bayan-wrap:hover .bayan-icon {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 819px) {
+  .container {
+    max-width: 40em;
+  }
+
+  .bayan-icon {
+    opacity: 1;
+  }
+
+  .title {
+    font-size: 2em;
+  }
+
+  .bayan {
+    font-size: 1.1em;
+  }
+}
